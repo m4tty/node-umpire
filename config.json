@@ -1,0 +1,10 @@
+{
+	"graphite" : {
+		"host" : "http://graphite.test.net",
+		"port" : 80
+	},
+	"numpire" : {
+		"host" : "localhost",
+		"port" : 8000
+	}
+}
