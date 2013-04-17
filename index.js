@@ -1,1 +1,1 @@
-module.exports = require('./lib/numpire');
+module.exports = require('./lib/routing');
