@@ -1,10 +1,19 @@
 {
 	"graphite" : {
-		"host" : "http://graphite.test.net",
+		"host" : "http://graphite.blah12345.net",
 		"port" : 80
 	},
 	"numpire" : {
 		"host" : "localhost",
-		"port" : 8000
+		"port" : 8000,
+		"isSelfTracking" : true,
+		"selfTracking" : {
+			"statsd": {
+				"host": "localhost",
+				"port": 8125,
+				"prefix": "numpire.",
+				"sampleRate": 1
+			}
+		}
 	}
 }

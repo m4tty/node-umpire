@@ -4,7 +4,7 @@
   "description": "Umpire inspired node.js implementation. Provides an HTTP endpoint that responds 200 or non-200 according to the parameters passed and the data retrieved pulled from graphite.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/*.js"
   },
   "repository": "",
   "keywords": [
@@ -19,6 +19,7 @@
     "request": "~2.16.6",
     "underscore": "~1.4.4",
     "nock": "~0.17.3",
-    "mocha": "~1.9.0"
+    "mocha": "~1.9.0",
+    "node-statsd": "0.0.7"
   }
 }
