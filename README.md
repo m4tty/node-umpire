@@ -42,6 +42,36 @@ Lastly, start the application with:
     > node index.js
 
 
+Configuring Numpire
+-----------------
+
+Edit the config.json that sits in the root.  The settings should be self explanatory, perhaps excepting selfTracking.  selfTracking will cause Numpire to send a "increment" count to statsd, which will allow you to see which metrics are passing/failing the numpire checks over time.
+``` javascript
+{
+	"graphite" : {
+		"host" : "http://graphite.blah12345.net",
+		"port" : 80
+	},
+	"numpire" : {
+		"host" : "localhost",
+		"port" : 8000,
+		"isSelfTracking" : true,
+		"selfTracking" : {
+			"statsd": {
+				"host": "localhost",
+				"port": 8125,
+				"prefix": "numpire.",
+				"sampleRate": 1
+			}
+		}
+	}
+}
+
+```
+
+
+
+
 ## Health
 
 Check the health of the Numpire process itself with:
