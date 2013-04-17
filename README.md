@@ -1,4 +1,4 @@
-# Umpire
+# Numpire
 
 ## Overview
 
@@ -7,21 +7,21 @@ Numpire (Umpire in node.js) provides a normalized HTTP endpoint that responds wi
 
 ## Usage Examples
 
-Set an `UMPIRE_URL` that you can use to query against:
+Set an `NUMPIRE_URL` that you can use to query against:
 
 ```bash
-$ export UMPIRE_URL=http://umpire.somedomain123.net
+$ export NUMPIRE_URL=http://umpire.somedomain123.net
 ```
 To respond with 200 if the `pulse.nginx-requests-per-second` metric has had an average value of less than 400 over the last 300 seconds:
 
 ```bash
-$ curl -i "$UMPIRE_URL/check?metric=pulse.nginx-requests-per-second&max=400&range=300"
+$ curl -i "$NUMPIRE_URL/check?metric=pulse.nginx-requests-per-second&max=400&range=300"
 ```
 
 To respond with 200 if the `custom.api.production.requests.per-sec` metric has had an average value of more than 40 over the past 60 seconds:
 
 ```bash
-$ curl -i "$UMPIRE_URL/check?metric=custom.api.production.requests.per-sec&min=40&range=60"
+$ curl -i "$NUMPIRE_URL/check?metric=custom.api.production.requests.per-sec&min=40&range=60"
 ```
 
 Installing Numpire
@@ -44,10 +44,10 @@ Lastly, start the application with:
 
 ## Health
 
-Check the health of the Umpire process itself with:
+Check the health of the Numpire process itself with:
 
 ```bash
-$ curl -i "$UMPIRE_URL/health"
+$ curl -i "$NUMPIRE_URL/health"
 ```
 
 
