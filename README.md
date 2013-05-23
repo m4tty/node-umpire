@@ -31,7 +31,7 @@ Numpire requires Node.js 0.8
 
 To install from GitHub, clone the repository and install dependencies using `npm`:
 
-    > git clone git://github.com/m4tty/numpire.git
+    > git clone git://github.com:m4tty/node-umpire.git
     > cd numpire
     > npm install
 
@@ -53,6 +53,7 @@ Edit the config.json that sits in the root.  The settings should be self explana
 		"port" : 80
 	},
 	"numpire" : {
+		"debug" : false,
 		"host" : "localhost",
 		"port" : 8000,
 		"isSelfTracking" : true,
